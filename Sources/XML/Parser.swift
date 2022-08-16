@@ -58,12 +58,9 @@ extension Parser: XMLParserDelegate {
         
     }
     private func append(_ string: String) {
-        count[level]?.append(string)
-        /*
         switch string.replacingOccurrences(of: " ", with: "") {
         case "\n", "\n\n", "\n\n\n": break
         default: count[level]?.append(string)
         }
-        */
     }
 }

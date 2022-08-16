@@ -1,8 +1,8 @@
 extension String: ElementProtocol {
     public var string: String { self }
-    public var transform: String { self.escaped }
+    public var transform: String { self }
 }
-
+/*
 extension String {
     var escaped: String {
         let dictionary: [String: String] = ["\"": "&quot;", "'": "&#39;", "&": "&amp;", "<": "&lt;", ">": "&gt;"]
@@ -13,3 +13,4 @@ extension String {
         return value
     }
 }
+*/

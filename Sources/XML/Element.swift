@@ -13,7 +13,7 @@ public struct Element {
 extension Element: ElementProtocol {
     public var string: String { elements.map(\.string).joined() }
     public var transform: String {
-        "<\(tag)\(attributed)>\(elements.map(\.transform.escaped).joined())</\(tag)>"
+        "<\(tag)\(attributed)>\(elements.map(\.transform).joined())</\(tag)>"
     }
     private var attributed: String {
         guard !attributes.isEmpty else { return "" }

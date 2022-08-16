@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "xml",
-    products: [.library(name: "xml", targets: ["XML"])],
+    name: "XML",
+    products: [.library(name: "XML", targets: ["XML"])],
     targets: [.target(name: "XML")]
 )

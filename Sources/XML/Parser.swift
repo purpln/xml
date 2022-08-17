@@ -1,4 +1,8 @@
+#if canImport(FoundationXML)
+import FoundationXML
+#else
 import Foundation
+#endif
 
 public class Parser: NSObject {
     private let xmlParser: XMLParser

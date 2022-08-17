@@ -1,11 +1,11 @@
-#if canImport(FoundationXML)
+#if os(Linux)
 import FoundationXML
 #else
 import Foundation
 #endif
 
 public class Parser: NSObject {
-#if canImport(FoundationXML)
+#if os(Linux)
     typealias FoundationXMLParser = FoundationXML.XMLParser
 #else
     typealias FoundationXMLParser = Foundation.XMLParser

@@ -5,7 +5,13 @@ import Foundation
 #endif
 
 public class Parser: NSObject {
-    private let xmlParser: XMLParser
+#if canImport(FoundationXML)
+    typealias FoundationXMLParser = FoundationXML.XMLParser
+#else
+    typealias FoundationXMLParser = Foundation.XMLParser
+#endif
+    
+    private let xmlParser: FoundationXMLParser
     
     private var openned: [String] = []
     private var level: Int { openned.count }

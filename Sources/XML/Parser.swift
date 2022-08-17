@@ -26,7 +26,7 @@ public class Parser: NSObject {
     }
     
     public init(data: Data) {
-        xmlParser = XMLParser(data: data)
+        xmlParser = FoundationXMLParser(data: data)
         super.init()
         xmlParser.delegate = self
     }

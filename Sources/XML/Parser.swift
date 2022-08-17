@@ -1,5 +1,6 @@
 #if os(Linux)
 import FoundationXML
+import Foundation
 #else
 import Foundation
 #endif

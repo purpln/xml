@@ -17,10 +17,10 @@ public class Parser: NSObject {
     private var openned: [String] = []
     private var level: Int { openned.count }
     private var previous: Int = 0
-    private var count: [Int:[ElementProtocol]] = [:]
+    private var count: [Int:[any ElementProtocol]] = [:]
     private var attributes: [Int:[String: String]] = [:]
     
-    public var document: [ElementProtocol] {
+    public var document: [any ElementProtocol] {
         guard xmlParser.parse() else { return [] }
         guard let document = count[0] else { return [] }
         return document
@@ -66,7 +66,7 @@ extension Parser: XMLParserDelegate {
         count[level]?.append(element)
     }
     public func parser(_ parser: XMLParser, parseErrorOccurred parseError: Error) {
-        
+        print(parseError)
     }
     private func append(_ string: String) {
         switch string.replacingOccurrences(of: " ", with: "") {
